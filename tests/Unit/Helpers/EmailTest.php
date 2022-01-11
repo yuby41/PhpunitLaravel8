@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Helppers;
+namespace Tests\Unit\Helpers;
 
 use PHPUnit\Framework\TestCase;
 use App\Helpers\Email;
