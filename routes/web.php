@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +19,12 @@ Route::get('/', function () {
 
 Route::get('about', function () {
     return "Hello I'am about";
+});
+
+Route::view('profile', 'profile');
+
+Route::post('profile', function (Request $request){
+    $request->file('photo')->store('profiles');
+
+    return redirect('profile');
 });
